@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 🌟 Global Page Setup */
+html, body, #root {
+  height: 100%;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(to bottom right, #f8fafc, #eef2ff);
+  color: #1e293b;
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Keeps content from hiding under sticky navbar */
+  box-sizing: border-box;
+}
+
+/* 🌟 Smooth Transitions for All Elements */
+* {
+  transition: all 0.3s ease-in-out;
+}
+
+/* 🌟 Custom Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* 🌟 Simple Fade-In Animation (for cards, modals, sections, etc.) */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeInUp 0.7s ease-out both;
+}
+
+/* 🌟 Optional Section Fade (you can use if needed) */
+.fade-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
